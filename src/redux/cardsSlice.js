@@ -217,7 +217,17 @@ export const cardsSlice = createSlice({
       },
     ],
   },
-  reducers: {},
+  reducers: {
+    toggleOpen: (state, action) => {
+      const length = state.items.filter((item) => item.isOpen).length;
+      if (length >= 2) {
+        return;
+      }
+      const myitem = state.items.find((item) => item.id === action.payload);
+      myitem.isOpen = !myitem.isOpen;
+    },
+  },
 });
 
+export const { toggleOpen } = cardsSlice.actions;
 export default cardsSlice.reducer;

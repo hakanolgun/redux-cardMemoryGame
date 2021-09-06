@@ -1,6 +1,6 @@
 .headerContainer {
   display: flex;
   justify-content: space-around;
-  padding-block: 1rem;
+  padding: 3rem 0rem 2rem 0rem;
   width: 100%;
 }
