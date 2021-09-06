@@ -11,6 +11,7 @@ export const cardsSlice = createSlice({
         pair: 1,
         src: "/images/angular2.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -18,6 +19,7 @@ export const cardsSlice = createSlice({
         pair: 1,
         src: "/images/angular2.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -25,6 +27,7 @@ export const cardsSlice = createSlice({
         pair: 2,
         src: "/images/babel.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -32,6 +35,7 @@ export const cardsSlice = createSlice({
         pair: 2,
         src: "/images/babel.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -39,6 +43,7 @@ export const cardsSlice = createSlice({
         pair: 3,
         src: "/images/bootstrap.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -46,6 +51,7 @@ export const cardsSlice = createSlice({
         pair: 3,
         src: "/images/bootstrap.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -53,6 +59,7 @@ export const cardsSlice = createSlice({
         pair: 4,
         src: "/images/electron.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -60,6 +67,7 @@ export const cardsSlice = createSlice({
         pair: 4,
         src: "/images/electron.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -67,6 +75,7 @@ export const cardsSlice = createSlice({
         pair: 5,
         src: "/images/ember.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -74,6 +83,7 @@ export const cardsSlice = createSlice({
         pair: 5,
         src: "/images/ember.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -81,6 +91,7 @@ export const cardsSlice = createSlice({
         pair: 6,
         src: "/images/jquery.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -88,6 +99,7 @@ export const cardsSlice = createSlice({
         pair: 6,
         src: "/images/jquery.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -95,6 +107,7 @@ export const cardsSlice = createSlice({
         pair: 7,
         src: "/images/next.js.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -102,6 +115,7 @@ export const cardsSlice = createSlice({
         pair: 7,
         src: "/images/next.js.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -109,6 +123,7 @@ export const cardsSlice = createSlice({
         pair: 8,
         src: "/images/nodemon.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -123,6 +138,7 @@ export const cardsSlice = createSlice({
         pair: 9,
         src: "/images/npm.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -130,6 +146,7 @@ export const cardsSlice = createSlice({
         pair: 9,
         src: "/images/npm.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -137,6 +154,7 @@ export const cardsSlice = createSlice({
         pair: 10,
         src: "/images/nuxt.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -144,6 +162,7 @@ export const cardsSlice = createSlice({
         pair: 10,
         src: "/images/nuxt.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -151,6 +170,7 @@ export const cardsSlice = createSlice({
         pair: 11,
         src: "/images/react-router.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -158,6 +178,7 @@ export const cardsSlice = createSlice({
         pair: 11,
         src: "/images/react-router.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -165,6 +186,7 @@ export const cardsSlice = createSlice({
         pair: 12,
         src: "/images/redux.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -172,6 +194,7 @@ export const cardsSlice = createSlice({
         pair: 12,
         src: "/images/redux.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -179,6 +202,7 @@ export const cardsSlice = createSlice({
         pair: 13,
         src: "/images/svelte.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -186,6 +210,7 @@ export const cardsSlice = createSlice({
         pair: 13,
         src: "/images/svelte.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -193,6 +218,7 @@ export const cardsSlice = createSlice({
         pair: 14,
         src: "/images/vue.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -200,6 +226,7 @@ export const cardsSlice = createSlice({
         pair: 14,
         src: "/images/vue.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -207,6 +234,7 @@ export const cardsSlice = createSlice({
         pair: 15,
         src: "/images/yarn.png",
         isOpen: false,
+        hidden: false,
       },
       {
         id: nanoid(),
@@ -214,16 +242,50 @@ export const cardsSlice = createSlice({
         pair: 15,
         src: "/images/yarn.png",
         isOpen: false,
+        hidden: false,
       },
     ],
+    myScore: 0,
+    myDouble: [],
   },
   reducers: {
     toggleOpen: (state, action) => {
       const myitem = state.items.find((item) => item.id === action.payload);
-      myitem.isOpen = !myitem.isOpen;
+      myitem.isOpen = true;
+
+      const eklenmismi = state.myDouble.find((item) => item.id === myitem.id);
+      if (eklenmismi === undefined) {
+        state.myDouble.push({ id: myitem.id, pair: myitem.pair });
+      }
+
+      if (
+        state.myDouble.length === 2 &&
+        state.myDouble[0].pair === state.myDouble[1].pair
+      ) {
+        console.log("ikili if calıstı");
+        const updatedItems = state.items.map((item) =>
+          item.pair === state.myDouble[0].pair
+            ? { ...item, hidden: true }
+            : item
+        );
+        state.items = updatedItems;
+        state.myDouble = [];
+        state.myScore += 50;
+      } else if (
+        state.myDouble.length === 2 &&
+        state.myDouble[0].pair !== state.myDouble[1].pair
+      ) {
+        console.log("ikili if ikinci çalıştı");
+        state.myDouble = [];
+        state.myScore -= 10;
+      }
+    },
+    closeAgain: (state, action) => {
+      const myitem = state.items.find((item) => item.id === action.payload);
+      myitem.isOpen = false;
     },
   },
 });
 
-export const { toggleOpen } = cardsSlice.actions;
+export const { toggleOpen, closeAgain } = cardsSlice.actions;
 export default cardsSlice.reducer;

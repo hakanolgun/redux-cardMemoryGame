@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import questionicon from "../../questionicon.png";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleOpen } from "../../redux/cardsSlice";
+import { toggleOpen, closeAgain } from "../../redux/cardsSlice";
 
 function Card({ card }) {
   const dispatch = useDispatch();
@@ -23,18 +23,23 @@ function Card({ card }) {
 
     dispatch(toggleOpen(id));
     setTimeout(() => {
-      dispatch(toggleOpen(id));
+      dispatch(closeAgain(id));
     }, 1000);
   };
   return (
-    <div className={styles.cardContainer} onClick={() => handleToggle(card.id)}>
+    <div
+      className={`${styles.cardContainer} ${card.hidden ? styles.hidden : ""}`}
+      onClick={() => handleToggle(card.id)}
+    >
       <img
         className={`${styles.cardImage_front} ${card.isOpen && styles.toggle}`}
         src={questionicon}
         alt={card.title}
       />
       <img
-        className={`${styles.cardImage_back} ${!card.isOpen && styles.toggle}`}
+        className={`${styles.cardImage_back} ${!card.isOpen && styles.toggle} ${
+          card.hidden && styles.finished
+        }`}
         src={card.src}
         alt={card.title}
       />

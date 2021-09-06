@@ -27,3 +27,12 @@
 .toggle {
   transform: rotateY(180deg);
 }
+
+.hidden {
+  /* visibility: hidden; */
+  opacity: 0.4;
+  pointer-events: none;
+}
+.finished {
+  transform: none;
+}
