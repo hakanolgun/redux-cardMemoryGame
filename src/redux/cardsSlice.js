@@ -288,7 +288,16 @@ export const cardsSlice = createSlice({
       const newStartList = state.items.map(
         (item) => item && { ...item, isOpen: false, hidden: false }
       );
-      state.items = newStartList;
+
+      function shuffle(a) {
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
+      state.items = shuffle(newStartList);
+
       state.myScore = 0;
       state.myDouble = [];
     },

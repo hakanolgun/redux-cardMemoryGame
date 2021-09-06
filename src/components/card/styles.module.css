@@ -18,7 +18,7 @@ label {
   height: 80px;
   perspective: 1000px;
   position: relative;
-  transition: transform 0.7s;
+  transition: transform 0.5s;
   transform-style: preserve-3d;
 }
 
@@ -50,4 +50,17 @@ input {
 }
 :checked + .cardContainer {
   transform: rotateY(180deg);
+}
+
+@media screen and (max-width:420px) {
+  label {
+    height: 80px;
+    perspective: 1000px;
+  }
+  
+  .cardContainer {
+    padding: 1rem 0.7rem;
+    height: 80px;
+    perspective: 1000px;
+  }
 }
