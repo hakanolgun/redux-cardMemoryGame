@@ -1,3 +1,11 @@
+label {
+  height: 70px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
 .cardContainer {
   box-sizing: border-box;
   cursor: pointer;
@@ -10,7 +18,7 @@
   height: 70px;
   perspective: 1000px;
   position: relative;
-  transition: transform 1s;
+  transition: transform 0.7s;
   transform-style: preserve-3d;
 }
 
@@ -24,7 +32,7 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.toggle {
+.cardImage_front {
   transform: rotateY(180deg);
 }
 
@@ -34,4 +42,12 @@
 }
 .finished {
   transform: none;
+}
+
+/* Youtuebe flip */
+input {
+  display: none;
+}
+:checked + .cardContainer {
+  transform: rotateY(180deg);
 }

@@ -262,7 +262,6 @@ export const cardsSlice = createSlice({
         state.myDouble.length === 2 &&
         state.myDouble[0].pair === state.myDouble[1].pair
       ) {
-        console.log("ikili if calıstı");
         const updatedItems = state.items.map((item) =>
           item.pair === state.myDouble[0].pair
             ? { ...item, hidden: true }
@@ -275,17 +274,28 @@ export const cardsSlice = createSlice({
         state.myDouble.length === 2 &&
         state.myDouble[0].pair !== state.myDouble[1].pair
       ) {
-        console.log("ikili if ikinci çalıştı");
         state.myDouble = [];
         state.myScore -= 10;
       }
     },
-    closeAgain: (state, action) => {
-      const myitem = state.items.find((item) => item.id === action.payload);
-      myitem.isOpen = false;
+    closeAgain: (state) => {
+      // const myitem = state.items.find((item) => item.id === action.payload);
+      // myitem.isOpen = false;
+      const newlist = state.items.map((item) =>
+        item.hidden ? item : { ...item, isOpen: false }
+      );
+      state.items = newlist;
+    },
+    playAgain: (state) => {
+      const newStartList = state.items.map(
+        (item) => item && { ...item, isOpen: false, hidden: false }
+      );
+      state.items = newStartList;
+      state.myScore = 0;
+      state.myDouble = [];
     },
   },
 });
 
-export const { toggleOpen, closeAgain } = cardsSlice.actions;
+export const { toggleOpen, closeAgain, playAgain } = cardsSlice.actions;
 export default cardsSlice.reducer;
