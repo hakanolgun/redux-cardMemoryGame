@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 import { nanoid } from "@reduxjs/toolkit";
 
 export const cardsSlice = createSlice({
@@ -219,10 +219,6 @@ export const cardsSlice = createSlice({
   },
   reducers: {
     toggleOpen: (state, action) => {
-      const length = state.items.filter((item) => item.isOpen).length;
-      if (length >= 2) {
-        return;
-      }
       const myitem = state.items.find((item) => item.id === action.payload);
       myitem.isOpen = !myitem.isOpen;
     },

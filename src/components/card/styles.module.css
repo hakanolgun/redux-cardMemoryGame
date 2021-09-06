@@ -1,13 +1,29 @@
 .cardContainer {
-  padding: 25%;
   box-sizing: border-box;
   cursor: pointer;
   border-radius: 10px;
-  background-color: #d1d2d3;
+  background-color: #f4f5f7;
+  padding: 1rem 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 70px;
+  perspective: 1000px;
+  position: relative;
+  transition: transform 1.6s;
+  transform-style: preserve-3d;
 }
-.cardImage {
-  max-width: 70px;
+
+.cardImage_front,
+.cardImage_back {
+  position: absolute;
+  box-sizing: border-box;
+  width: 50px;
+  height: 60px;
+  padding: 0.4rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.toggle {
+  transform: rotateY(180deg);
 }
