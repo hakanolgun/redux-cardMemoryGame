@@ -4,6 +4,7 @@
   align-items: center;
   padding: 3rem 0rem 2rem 0rem;
   width: 100%;
+  text-align: center;
 }
 .headerAltDiv{
   display: flex;

@@ -249,14 +249,14 @@ export const cardsSlice = createSlice({
     myDouble: [],
   },
   reducers: {
-    toggleOpen: (state, action) => {
+    openCard: (state, action) => {
       const myitem = state.items.find((item) => item.id === action.payload);
       myitem.isOpen = true;
+    },
+    checkCard: (state, action) => {
+      const myitem = state.items.find((item) => item.id === action.payload);
 
-      const eklenmismi = state.myDouble.find((item) => item.id === myitem.id);
-      if (eklenmismi === undefined) {
-        state.myDouble.push({ id: myitem.id, pair: myitem.pair });
-      }
+      state.myDouble.push({ id: myitem.id, pair: myitem.pair });
 
       if (
         state.myDouble.length === 2 &&
@@ -279,8 +279,6 @@ export const cardsSlice = createSlice({
       }
     },
     closeAgain: (state) => {
-      // const myitem = state.items.find((item) => item.id === action.payload);
-      // myitem.isOpen = false;
       const newlist = state.items.map((item) =>
         item.hidden ? item : { ...item, isOpen: false }
       );
@@ -297,5 +295,6 @@ export const cardsSlice = createSlice({
   },
 });
 
-export const { toggleOpen, closeAgain, playAgain } = cardsSlice.actions;
+export const { openCard, checkCard, closeAgain, playAgain } =
+  cardsSlice.actions;
 export default cardsSlice.reducer;

@@ -2,21 +2,17 @@ import React from "react";
 import styles from "./styles.module.css";
 import questionicon from "../../questionicon.png";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleOpen, closeAgain } from "../../redux/cardsSlice";
+import { openCard, checkCard, closeAgain } from "../../redux/cardsSlice";
 
 function Card({ card }) {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cards.items);
-  const myDoubleLength = useSelector((state) => state.cards.myDouble).length;
 
   const handleToggle = (id) => {
     const myitem = items.find((item) => item.id === card.id);
-    const length = items.filter((item) => item.isOpen).length;
-    console.log("isOpen", length);
-    console.log("myDouble", myDoubleLength);
+    const length = items.filter((item) => item.isOpen && !item.hidden).length;
 
     if (myitem.isOpen) {
-      console.log("zaten acık, tiklanmaz");
       return;
     }
 
@@ -24,8 +20,13 @@ function Card({ card }) {
       return;
     }
 
-    dispatch(toggleOpen(id));
-    if (myDoubleLength === 1) {
+    dispatch(openCard(id));
+
+    setTimeout(() => {
+      dispatch(checkCard(id));
+    }, 500);
+
+    if (length === 1) {
       setTimeout(() => {
         dispatch(closeAgain());
       }, 1000);

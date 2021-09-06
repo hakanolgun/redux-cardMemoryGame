@@ -1,5 +1,5 @@
 label {
-  height: 70px;
+  height: 80px;
   perspective: 1000px;
   transform-style: preserve-3d;
   transform: rotateY(180deg);
@@ -10,12 +10,12 @@ label {
   box-sizing: border-box;
   cursor: pointer;
   border-radius: 10px;
-  background-color: #dfdfdf;
+  background-color: #dddddf;
   padding: 1rem 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
+  height: 80px;
   perspective: 1000px;
   position: relative;
   transition: transform 0.7s;
