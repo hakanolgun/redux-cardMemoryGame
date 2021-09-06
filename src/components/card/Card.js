@@ -26,20 +26,21 @@ function Card({ card }) {
       dispatch(closeAgain(id));
     }, 1000);
   };
+  
   return (
     <div
-      className={`${styles.cardContainer} ${card.hidden ? styles.hidden : ""}`}
+      className={`${styles.cardContainer} ${card.hidden ? styles.hidden : ""} ${
+        !card.isOpen && styles.toggle
+      }`}
       onClick={() => handleToggle(card.id)}
     >
       <img
-        className={`${styles.cardImage_front} ${card.isOpen && styles.toggle}`}
+        className={`${styles.cardImage_front}`}
         src={questionicon}
         alt={card.title}
       />
       <img
-        className={`${styles.cardImage_back} ${!card.isOpen && styles.toggle} ${
-          card.hidden && styles.finished
-        }`}
+        className={`${styles.cardImage_back} ${card.hidden && styles.finished}`}
         src={card.src}
         alt={card.title}
       />
